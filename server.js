@@ -32,6 +32,10 @@ const PORT = process.env.PORT || 8080;
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/openai", require("./routes/openaiRoutes"));
 
+app.get("/",(req,res)=>{
+  res.send("hello from backend")
+})
+
 //listen server
 app.listen(PORT, () => {
   console.log(
